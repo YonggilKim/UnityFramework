@@ -11,8 +11,11 @@ public class UI_Popup : UI_Base
             return false;
 
         Managers.UI.SetCanvas(gameObject, true);
+        PopupOpenAnimation(gameObject);
         return true;
     }
+
+    
 
     public virtual void ClosePopupUI()
     {

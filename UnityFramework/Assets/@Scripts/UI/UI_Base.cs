@@ -75,6 +75,7 @@ public abstract class UI_Base : MonoBehaviour
         switch (type)
         {
             case Define.UIEvent.Click:
+                Util.GetOrAddComponent<UI_ButtonAnimation>(go);
                 evt.OnClickHandler -= action;
                 evt.OnClickHandler += action;
                 break;

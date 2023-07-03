@@ -13,11 +13,13 @@ public class UI_TitleScene : UI_Scene
     #region Enum
     enum GameObjects
     {
+        StartButton
     }
 
     enum Buttons
     {
     }
+
 
     enum Texts
     {
@@ -30,7 +32,10 @@ public class UI_TitleScene : UI_Scene
         if (base.Init() == false)
             return false;
 
-        //BindObject(typeof(GameObjects));
+        BindObject(typeof(GameObjects));
+
+        GetObject((int)GameObjects.StartButton).BindEvent(() => { Debug.Log("OnClick"); });
+
         //BindButton(typeof(Buttons));
         //BindText(typeof(Texts));
         
